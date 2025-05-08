@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '00 16 * * *'  # UTC 16:00，即北京时间 00:00
+    - cron: '00 02 * * *'  # UTC 02:00，即北京时间 10:00
 
 jobs:
   run-nodeseek-daily:
@@ -20,6 +20,7 @@ jobs:
         with:
           python-version: '3.11.8'
 
+   
       - name: Install Chrome and Xvfb
         run: |
           sudo apt-get update
@@ -28,7 +29,11 @@ jobs:
           chromium-browser --version
           echo "ChromeDriver version:"
           chromedriver --version
-
+          
+      - name: Delay for a random duration
+        run: |
+          sleep $((30 + RANDOM % 71))  # 延迟 30 到 100 秒
+          
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
