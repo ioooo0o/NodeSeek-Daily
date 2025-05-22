@@ -1,4 +1,4 @@
-# -- coding: utf-8 -- 
+# -- coding: utf-8 --
 """
 Copyright (c) 2024 [Hosea]
 Licensed under the MIT License.
@@ -184,17 +184,7 @@ def nodeseek_comment(driver):
                 continue
         
         is_chicken_leg = False
-                         
-                print(f"已在帖子 {post_url} 中完成评论")
-                
-                # 返回交易区
-                # driver.get(target_url)
-                # time.sleep(2)  # 等待页面加载
-                time.sleep(random.uniform(2,5))
-                
-            except Exception as e:
-                print(f"处理帖子时出错: {str(e)}")
-                continue
+        
                 
         print("NodeSeek评论任务完成")
                 
