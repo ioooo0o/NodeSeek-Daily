@@ -293,7 +293,7 @@ if __name__ == "__main__":
     if not driver:
         print("浏览器初始化失败")
         exit(1)
-    # nodeseek_comment(driver)  # 注释或删除这一行
+    # nodeseek_comment(driver)  #注释或删除这一行
     click_sign_icon(driver)
     print("脚本执行完成")
     # while True:
