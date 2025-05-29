@@ -183,7 +183,8 @@ def nodeseek_comment(driver):
             except:
                 continue
         
-        is_chicken_leg = False
+        # is_chicken_leg = False
+        is_chicken_leg = True
         
         # 使用URL列表进行操作
         for i, post_url in enumerate(selected_urls):
